@@ -1,8 +1,11 @@
+@import 'bootstrap';
+$body-bg:#ecf0f1;
+$font-family-sans-serif:"Open Sans";
 
-body{background-color:light gray;}
+
 .content{margin-top:100px;}
 
-
+.navbar-inverse .navbar-nav > li > a{color:white}
 footer{
   padding:60px 30px;
   background-color:black;
@@ -10,3 +13,4 @@ footer{
   line-height: 20px;
   font-size:15px;
 }
+
