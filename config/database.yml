@@ -42,9 +42,27 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
+development:
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  database: d3_development
   pool: 5
+  username: d3_dev
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: d3_test
+  pool: 5
+  username: d3_test
+  password:
+
+
+
+
+
+
+
+
+
