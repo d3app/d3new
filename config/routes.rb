@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  get 'home/index'
 
-  get 'home' =>'pages#home'
+  root 'home#index'
+
+  get 'home' =>'home#index'
   get 'about' => 'pages#about'
   get 'd3plus'=> 'pages#d3plus'
   get 'iengine'=> 'pages#iengine'
