@@ -54,7 +54,7 @@ development:
   encoding: unicode
   database: d3_development
   pool: 5
-  username: d3_dev
+  # username: d3_dev
   password:
 
 test:
@@ -62,7 +62,7 @@ test:
   encoding: unicode
   database: d3_test
   pool: 5
-  username: d3_test
+  # username: d3_test
   password:
 
 
