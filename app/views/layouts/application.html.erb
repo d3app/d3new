@@ -11,12 +11,17 @@
 <body>
 
    <%= render 'layouts/navbar' %>
+
+   <% flash.each do |name, msg| %>
+      <%= content_tag(:div,msg,class: "alert alert-info") %>
+   <% end %>
+
   <div class="content">
     <%= yield %>
   </div>
 
 
-  <%# <%= render 'layouts/footer' %>
+   <%= render 'layouts/footer' %>
 
 
 </body>
