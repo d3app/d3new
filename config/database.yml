@@ -26,6 +26,24 @@
 
 
 
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.postgresql
+
+test:
+  <<: *default
+  database: db/test.postgresql
+
+production:
+  <<: *default
+  database: db/production.postgresql
+
+
 # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
@@ -42,28 +60,31 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: d3_development
-  pool: 5
-  # username: d3_dev
-  password:
 
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: d3_test
-  pool: 5
-  # username: d3_test
-  password:
+
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+ 
+#   pool: 5
+
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: d3_development
+#   pool: 5
+#   # username: d3_dev
+#   password:
+
+# test:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: d3_test
+#   pool: 5
+#   # username: d3_test
+#   password:
 
 
 
