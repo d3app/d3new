@@ -30,7 +30,7 @@ development:
   encoding: unicode
   database: myapp_development
   pool: 5
-  username: myapp
+  # username: myapp
   password: password1
 
 test:
@@ -38,7 +38,7 @@ test:
   encoding: unicode
   database: myapp_test
   pool: 5
-  username: myapp
+  # username: myapp
   password: password1
 
 
