@@ -25,23 +25,21 @@
 #   database: db/production.sqlite3
 
 
-
-default: &default
-  adapter: postgresql
-  pool: 5
-  timeout: 5000
-
 development:
-  <<: *default
-  database: db/development.postgresql
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_development
+  pool: 5
+  username: myapp
+  password: password1
 
 test:
-  <<: *default
-  database: db/test.postgresql
-
-production:
-  <<: *default
-  database: db/production.postgresql
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_test
+  pool: 5
+  username: myapp
+  password: password1
 
 
 # PostgreSQL. Versions 8.2 and up are supported.
